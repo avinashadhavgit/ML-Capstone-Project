@@ -55,13 +55,15 @@ Evaluated 5 distinct classifiers using **5-Fold Stratified Cross-Validation** (`
 
 Running 5 fold stratefied Cross validation
 
-Cross validation results sorted by F1 score:
-              model  accuracy  precision   recall       f1
-Logistic Regression  0.800410   0.579048 0.471429 0.518125
-        Naive Bayes  0.775166   0.497618 0.528571 0.507142
-      Decision Tree  0.749411   0.427692 0.385714 0.404102
-      Random Forest  0.810292   0.803333 0.214286 0.332147
-K-Nearest Neighbors  0.787814   0.472381 0.185714 0.264745
+
+| **Rank** | **Model**           | **Accuracy** | **Precision** | **Recall** | **F1 Score** |
+| :------: | ------------------- | :----------: | :-----------: | :--------: | :----------: |
+|     1    | Logistic Regression |   0.800410   |    0.579048   |  0.471429  | **0.518125** |
+|     2    | Naive Bayes         |   0.775166   |    0.497618   |  0.528571  | **0.507142** |
+|     3    | Decision Tree       |   0.749411   |    0.427692   |  0.385714  | **0.404102** |
+|     4    | Random Forest       |   0.810292   |    0.803333   |  0.214286  | **0.332147** |
+|     5    | K-Nearest Neighbors |   0.787814   |    0.472381   |  0.185714  | **0.264745** |
+
 
 ###  Model Selection Rationale
 **Logistic Regression** was selected as the final production model. In employee turnover prediction, **Accuracy** is the most critical business metric—failing to flag an actual resigning employee Logistic Regression achieved the highest **Accuracy (80%)** and top **F1-Score (0.518125)**.
