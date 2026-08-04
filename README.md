@@ -53,18 +53,18 @@ Evaluated 5 distinct classifiers using **5-Fold Stratified Cross-Validation** (`
 
 ##  Model Evaluation & Results
 
-### 5-Fold Stratified Cross-Validation Summary:
+Running 5 fold stratefied Cross validation
 
-| Model | CV Accuracy | CV Precision | CV Recall | CV F1-Score |
-| :--- | :---: | :---: | :---: | :---: |
-| **Gaussian Naive Bayes** | **77.6%** | **40.1%** | **63.1%** | **0.489** |
-| **Logistic Regression** | 86.4% | 67.6% | 37.3% | 0.480 |
-| **Decision Tree** | 78.7% | 37.1% | 37.9% | 0.374 |
-| **Random Forest** | 85.2% | 71.5% | 20.2% | 0.314 |
-| **K-Nearest Neighbors** | 84.1% | 62.9% | 14.7% | 0.237 |
+Cross validation results sorted by F1 score:
+              model  accuracy  precision   recall       f1
+Logistic Regression  0.800410   0.579048 0.471429 0.518125
+        Naive Bayes  0.775166   0.497618 0.528571 0.507142
+      Decision Tree  0.749411   0.427692 0.385714 0.404102
+      Random Forest  0.810292   0.803333 0.214286 0.332147
+K-Nearest Neighbors  0.787814   0.472381 0.185714 0.264745
 
 ###  Model Selection Rationale
-**Gaussian Naive Bayes** was selected as the final production model. In employee turnover prediction, **Recall** is the most critical business metric—failing to flag an actual resigning employee (False Negative) is significantly costlier than reviewing a retained employee (False Positive). Gaussian Naive Bayes achieved the highest **Recall (63.1%)** and top **F1-Score (0.489)**.
+**Logistic Regression** was selected as the final production model. In employee turnover prediction, **Accuracy** is the most critical business metric—failing to flag an actual resigning employee Logistic Regression achieved the highest **Accuracy (80%)** and top **F1-Score (0.518125)**.
 
 ---
 
